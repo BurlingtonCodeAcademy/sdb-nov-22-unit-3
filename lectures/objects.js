@@ -30,6 +30,7 @@ console.log("best play friends", abby.bestPlayFriends[1]);
 // ! We can use SQUARE BRACKET NOTATION
 //  Favorite Activity
 console.log("favorite activity:", abby["favoriteActivity"]);
+console.log(abby["weight"]);
 
 // ? How do we add a new property to an object? Example add age as a property.
 abby.age = 5;
