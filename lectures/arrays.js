@@ -14,30 +14,37 @@
 
 // ? Creating an array literal
 
-let arr = []
+let arr = [];
 
-console.log(arr instanceof Array, arr) // returns true [ ]
+console.log(arr instanceof Array, arr); // returns true [ ]
 
 // ? Holding multiple data types
-let arrManyDataTypes = ["string", true, 90210, ["John", "Jeff", "James"], undefined, null]
+let arrManyDataTypes = [
+  "string",
+  true,
+  90210,
+  ["John", "Jeff", "James"],
+  undefined,
+  null,
+];
 
-console.log(arrManyDataTypes)
+console.log(arrManyDataTypes);
 
 // ? Accessing Single Dimension Array by index
 
-console.log(arrManyDataTypes[0], arrManyDataTypes[2], arrManyDataTypes[4])
+console.log(arrManyDataTypes[0], arrManyDataTypes[2], arrManyDataTypes[4]);
 
 // ? Accessing Multi Dimensional Array by index
 
 // What if I want to access "James" out of the nested array?
 // ? Chain top-level index to inner-array index
-console.log(arrManyDataTypes[3][2])
+console.log(arrManyDataTypes[3][2]);
 
 // ? What if I want to access "i" of string? No methods allowed
-console.log(arrManyDataTypes[0][3])
+console.log(arrManyDataTypes[0][3]);
 
 // ? What if I want to acces "ing" of string?
-console.log(arrManyDataTypes[0].slice(3))
+console.log(arrManyDataTypes[0].slice(3));
 
 // ? Arrays are Mutable
 
@@ -51,36 +58,36 @@ console.log(arrManyDataTypes[0].slice(3))
     ! 11AM
 */
 
-arrManyDataTypes[3] = ["Kevin", "Charlie", "Art"]
-console.log(arrManyDataTypes[3])
+arrManyDataTypes[3] = ["Kevin", "Charlie", "Art"];
+console.log(arrManyDataTypes[3]);
 
 // ? Array Methods
 
-/* 
-    * Array methods are functions that work on Array constructor
-    * Allow us to mutate, traverse, and do other things to arrays
-    * Denoted by a . at the end of an array we're working on
-    * ex: educationTeam.length
-*/
+/*
+ * Array methods are functions that work on Array constructor
+ * Allow us to mutate, traverse, and do other things to arrays
+ * Denoted by a . at the end of an array we're working on
+ * ex: educationTeam.length
+ */
 
 // ? Array Length Methods
 
 // ? Checks the length of an array
 
 let educationTeam = [
-    ["Paul Niemczyk", "Rob Vanarsdall", "Josh Burke", "Eric Winebrenner"],
-    ["Elena Bilodeau", "Ben Villa", "Dave Landey"],
-    ["Matt Nolan"]
-]
+  ["Paul Niemczyk", "Rob Vanarsdall", "Josh Burke", "Eric Winebrenner"],
+  ["Elena Bilodeau", "Ben Villa", "Dave Landey"],
+  ["Matt Nolan"],
+];
 
-console.log(educationTeam.length)
+console.log(educationTeam.length);
 
 for (let i = 0; i < educationTeam.length; i++) {
-    console.log(i, educationTeam[i])
+  console.log(i, educationTeam[i]);
 }
 
 // ? Get the last item of our education team array
-console.log(educationTeam[educationTeam.length - 1])
+console.log(educationTeam[educationTeam.length - 1]);
 
 // ! Off-by-one error - very common due to index and "normal" counting
 
@@ -90,16 +97,16 @@ console.log(educationTeam[educationTeam.length - 1])
     * Returns new length of an array
 */
 
-educationTeam.push(["Benny Boas", "Kate Sweeney"]) // Returns the length of new array
+educationTeam.push(["Benny Boas", "Kate Sweeney"]); // Returns the length of new array
 
 /* 
     ? Array.pop()
     * Removes last array element and returns it
 */
 
-let cSuite = educationTeam.pop()
+let cSuite = educationTeam.pop();
 
-console.log(cSuite) // Returns removed item
+console.log(cSuite); // Returns removed item
 
 /* 
     ? Array.shift()
@@ -107,7 +114,7 @@ console.log(cSuite) // Returns removed item
     * Returns the removed item
 */
 
-let cancelledTeam = educationTeam.shift()
+let cancelledTeam = educationTeam.shift();
 
 /* 
     ? Array.unshift()
@@ -115,16 +122,22 @@ let cancelledTeam = educationTeam.shift()
     * Returns new length of an array
 */
 
-educationTeam.unshift(cancelledTeam)
+educationTeam.unshift(cancelledTeam);
 
-console.log(educationTeam)
-
+console.log(educationTeam);
 
 // ? Advanced Array Methods
 
 // Arrays are iterable
 
-let bulldogTypes = ["English Bulldog", "French Bulldog", "Victorian Bulldog", "Old English Bulldog", "Bullmastiff", "American Bulldog"]
+let bulldogTypes = [
+  "English Bulldog",
+  "French Bulldog",
+  "Victorian Bulldog",
+  "Old English Bulldog",
+  "Bullmastiff",
+  "American Bulldog",
+];
 
 // for (i of bulldogTypes) {
 //     console.log(i)
@@ -142,48 +155,61 @@ let bulldogTypes = ["English Bulldog", "French Bulldog", "Victorian Bulldog", "O
 //     console.log(item, index, array)
 // })
 
-
-bulldogTypes.forEach(function(bully, index, array) {
-    console.log(array[index][2])
-    let newBully = `${bully.slice(0, 2)}${bully[2].toUpperCase()}${bully.slice(3)}`
-    array[index] = newBully
-})
-console.log(bulldogTypes)
+bulldogTypes.forEach(function (bully, index, array) {
+  console.log(array[index][2]);
+  let newBully = `${bully.slice(0, 2)}${bully[2].toUpperCase()}${bully.slice(
+    3
+  )}`;
+  array[index] = newBully;
+});
+console.log(bulldogTypes);
 
 /* 
     ? Array.map()
     * Creates an array with elements resulting from the callback function
 */
 
-let marvelCharacters = ["Captain America", "Black Widow", "Doctor Strange", "Ant Man", "Spider Man"]
+let marvelCharacters = [
+  "Captain America",
+  "Black Widow",
+  "Doctor Strange",
+  "Ant Man",
+  "Spider Man",
+];
 
-let capitalized = marvelCharacters.map(i => i.toUpperCase())
+let capitalized = marvelCharacters.map((i) => i.toUpperCase());
 
-capitalized.push("Hawkeye")
+console.log(capitalized);
+
+capitalized.push("Hawkeye");
 
 // ! .map creates a copy of an array. It will not modify the original
-console.log("original", marvelCharacters, "new", capitalized)
+console.log("original", marvelCharacters, "new", capitalized);
 
 /* 
     ? Array.filter()
     * Creates a new array based on a filter function
 */
 
-let startsA = marvelCharacters.filter(function(i) { return i.startsWith("A") })
+let startsA = marvelCharacters.filter(function (i) {
+  return i.startsWith("A");
+});
 
-console.log(startsA)
+console.log(startsA);
 
 // ! Mini Challenge
 
-let grades = [56, 78, 96, 41, 22, 7, 15, 10, 89]
+let grades = [56, 78, 96, 41, 22, 7, 15, 10, 89];
 
 /* 
     ? Utilize one of the array methods to raise the grade by 15 points for everyone
     ? Those above 90 should not get any points.
 */
 
-grades.forEach((grade, index, array) => grade > 90 ? null : array[index] = grade + 15)
-console.log(grades)
+grades.forEach((grade, index, array) =>
+  grade > 90 ? null : (array[index] = grade + 15)
+);
+console.log(grades);
 
-let newGrades = grades.map(grade => grade < 90 ? grade + 15 : grade)
-console.log(newGrades)
+let newGrades = grades.map((grade) => (grade < 90 ? grade + 15 : grade));
+console.log(newGrades);
