@@ -1,9 +1,11 @@
 let dog = {
   name: "Sparky",
   color: "brown",
-  bark: function () {
-    return this.name + " just barked";
-    // return `${this.name} just barked`;
+  pharses: {
+    bark: () => {
+      return this.name + " just barked";
+      // return `${this.name} just barked`;
+    },
   },
 };
 
@@ -11,7 +13,7 @@ let dog = {
 
 console.log(dog.name);
 
-console.log(dog.bark());
+console.log(dog.pharses.bark());
 
 // What if we wanted to console log "Sparky just barked"
 
