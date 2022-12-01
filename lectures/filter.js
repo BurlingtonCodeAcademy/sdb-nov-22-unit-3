@@ -7,11 +7,11 @@ Filter:
 - Must have a RETURN (Arrow functions the return is implied if only one line of code)
 */
 
-let fruits = ["apple", "pear", "mango", "orange", "pineapple"];
+let fruits = ["apple", "pear", "mAnGo", "orange", "pineapple"];
 
 // ?  How can I use a filter to remove the mango?
 
-const filteredFruit = fruits.filter((fruit) => fruit !== "mango");
+const filteredFruit = fruits.filter((fruit) => fruit.toLowerCase() !== "mango");
 
 console.log(filteredFruit);
 
