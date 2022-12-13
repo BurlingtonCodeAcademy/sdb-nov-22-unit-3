@@ -23,6 +23,14 @@ function ask(questionText) {
 - college - you can go to work
 - military - you can go to work or college
 */
+
+let roomStates = {
+  foyer: ["library", "hall"],
+  library: ["foyer", "bathroom"],
+  bathroom: ["library"],
+  hall: ["foyer"],
+};
+
 let states = {
   elementary: ["middle school"],
   "middle school": ["high school"],
